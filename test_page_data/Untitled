@@ -1,0 +1,225 @@
+# import random
+# import string
+# from faker import Faker
+
+# fake = Faker("en_CA")
+
+
+# class RandomGenerator:
+#     """
+#     Common random data generator for Playwright automation.
+#     """
+
+#     # -----------------------------
+#     # PERSON
+#     # -----------------------------
+
+#     @staticmethod
+#     def first_name():
+#         return fake.first_name()
+
+#     @staticmethod
+#     def last_name():
+#         return fake.last_name()
+
+#     @staticmethod
+#     def full_name():
+#         return fake.name()
+
+#     @staticmethod
+#     def email():
+#         return fake.email()
+
+#     @staticmethod
+#     def phone():
+#         # Returns 10 digits (format as needed by your app)
+#         return f"{random.randint(200,999)}{random.randint(200,999)}{random.randint(1000,9999)}"
+
+#     @staticmethod
+#     def company_name():
+#         return fake.company()
+
+#     @staticmethod
+#     def job_title():
+#         return fake.job()
+
+#     # -----------------------------
+#     # ADDRESS
+#     # -----------------------------
+
+#     @staticmethod
+#     def street():
+#         return fake.street_address()
+
+#     @staticmethod
+#     def city():
+#         return fake.city()
+
+#     @staticmethod
+#     def province():
+#         return fake.province()
+
+#     @staticmethod
+#     def postal_code():
+#         return fake.postcode()
+
+#     @staticmethod
+#     def full_address():
+#         return fake.address().replace("\n", ", ")
+
+#     # -----------------------------
+#     # NUMBERS
+#     # -----------------------------
+
+#     @staticmethod
+#     def number(minimum=1, maximum=999999):
+#         return str(random.randint(minimum, maximum))
+
+#     @staticmethod
+#     def decimal(minimum=1, maximum=100, places=2):
+#         value = random.uniform(minimum, maximum)
+#         return f"{value:.{places}f}"
+
+#     @staticmethod
+#     def percentage(minimum=1, maximum=100):
+#         return str(random.randint(minimum, maximum))
+
+#     # -----------------------------
+#     # MORTGAGE
+#     # -----------------------------
+
+#     @staticmethod
+#     def loan_amount():
+#         return str(random.randint(50000, 900000))
+
+#     @staticmethod
+#     def property_value():
+#         return str(random.randint(150000, 2000000))
+
+#     @staticmethod
+#     def balance_owing():
+#         return str(random.randint(10000, 600000))
+
+#     @staticmethod
+#     def monthly_payment():
+#         return str(random.randint(500, 7000))
+
+#     @staticmethod
+#     def monthly_savings():
+#         return str(random.randint(0, 3000))
+
+#     @staticmethod
+#     def annual_income():
+#         return str(random.randint(35000, 250000))
+
+#     @staticmethod
+#     def interest_rate():
+#         return f"{random.uniform(1.50, 12.99):.2f}"
+
+#     @staticmethod
+#     def mortgage_years():
+#         return str(random.randint(5, 35))
+
+#     # -----------------------------
+#     # CREDIT
+#     # -----------------------------
+
+#     @staticmethod
+#     def credit_score():
+#         return str(random.randint(300, 900))
+
+#     @staticmethod
+#     def tds_score():
+#         return str(random.randint(10, 55))
+
+#     @staticmethod
+#     def credit_utilization():
+#         return str(random.randint(1, 99))
+
+#     # -----------------------------
+#     # DATES
+#     # -----------------------------
+
+#     @staticmethod
+#     def birth_date(min_age=18, max_age=70):
+#         return fake.date_of_birth(
+#             minimum_age=min_age,
+#             maximum_age=max_age
+#         )
+
+#     @staticmethod
+#     def future_date():
+#         return fake.future_date()
+
+#     # -----------------------------
+#     # TEXT
+#     # -----------------------------
+
+#     @staticmethod
+#     def word():
+#         return fake.word()
+
+#     @staticmethod
+#     def sentence(words=8):
+#         return fake.sentence(nb_words=words)
+
+#     @staticmethod
+#     def paragraph(sentences=4):
+#         return fake.paragraph(nb_sentences=sentences)
+
+#     @staticmethod
+#     def short_note():
+#         return fake.text(max_nb_chars=80)
+
+#     # -----------------------------
+#     # IDs
+#     # -----------------------------
+
+#     @staticmethod
+#     def vfli_number():
+#         return str(random.randint(10000, 99999))
+
+#     @staticmethod
+#     def random_string(length=8):
+#         return ''.join(
+#             random.choices(
+#                 string.ascii_letters + string.digits,
+#                 k=length
+#             )
+#         )
+
+#     # -----------------------------
+#     # EMPLOYMENT
+#     # -----------------------------
+
+#     @staticmethod
+#     def employer():
+#         companies = [
+#             "Google",
+#             "Microsoft",
+#             "Amazon",
+#             "Apple",
+#             "Meta",
+#             "Tesla",
+#             "Fantech",
+#             "IBM",
+#             "Oracle",
+#             "Shopify"
+#         ]
+#         return random.choice(companies)
+
+#     # -----------------------------
+#     # BOOLEAN
+#     # -----------------------------
+
+#     @staticmethod
+#     def random_bool():
+#         return random.choice([True, False])
+
+#     # -----------------------------
+#     # Lists
+#     # -----------------------------
+
+#     @staticmethod
+#     def random_choice(values):
+#         return random.choice(values)

@@ -1,0 +1,10 @@
+{
+  "valid_user": {
+    "email": "hammad.ali@fantechlabs.io",
+    "password": "Test1234@"
+  },
+  "invalid_user": {
+    "email": "invalid@email.com",
+    "password": "InvalidPassword123"
+  }
+}
